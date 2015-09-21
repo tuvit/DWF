@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sing-in Page</title>
+  <link rel="stylesheet" href="css/sing-in.css">
+  <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+  <script>
+	$(function() {
+		var con = getUrlVars()["conect"];
+		console.log(con);
+		if(con){
+			alert("Your username or password was worng!");
+		}
+	});
+	
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+		function(m,key,value) {
+		  vars[key] = value;
+		});
+		return vars;
+	}	
+  </script>
+</head>
+<body>
+  <form method="get" action="http://localhost:8080/Login" id="myform" class="login">
+    <p>
+      <label for="login">Email:</label>
+      <input type="text" name="login" id="login" value="">
+    </p>
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" value="">
+    </p>
+    <p class="login-submit">
+      <button type="submit" class="login-button" id="submit">Login</button>
+    </p>
+    <p class="forgot-password"><a href="index.html">Forgot your password?</a></p>
+  </form>
+  
+</body>
+</html>

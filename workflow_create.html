@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  
+		<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],G9z0Bl:[function(n,e){function t(){var n=h.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(l,function(e,t){e in n||(n[e]=t)}),h.proto="https"===d.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=h.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",d=(""+location).split("?")[0],l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},h=e.exports={offset:i(),origin:d,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		
+		<script>base_url = "";
+               // fg_loader_show();
+			   var body_form_json = null ;
+			   var saveProcces = 0;
+        </script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.get("http://localhost:8080/api/v1/contacts", function(contacts) {
+					all_employees = contacts;
+				});
+				
+				$.get("http://localhost:8080/api/v1/forms", function(forms) {
+					all_forms = forms;
+				});
+				
+			});
+			
+			function create_workflow(){
+				console.log(body_form_json);
+				if(saveProcces == 0){
+					$.ajax({
+						url: 'http://localhost:8080/createFlow',
+						data: body_form_json,
+						type: 'POST',
+						dataType: 'json',
+					}).success(function() {
+						can_close = true;
+						window.close();
+					});
+				}else{
+					alert('canot save');
+					saveProcces = 0;				
+				}
+			}
+			
+			var current_form_title = "";
+			
+			function create_form(){
+				$.ajax({
+					url: 'http://localhost:8080/createForm',
+					data: body_form_json,
+					type: 'POST',
+					dataType: 'json',
+				}).success(function(form) {
+					var id = form;
+					var title = body_form_json.label;
+					// TODO: add the current form to the select and set selected
+					all_forms.forms.push({"id": id, "title": title});
+					$('.main-container').html(current_content);
+					$('.new-form-target').append('<option value="' + id + '" selected="true">' + title + '</option>');
+					$('.new-form-target').trigger('change');
+				});
+				
+			}
+			
+			function create_new_form(element) {
+				var parent = element.parentElement;
+				while(parent && parent.getElementsByTagName("select").length == 0) {
+					parent = parent.parentElement;
+				}
+				
+				if (!parent) {
+					alert("Can't add a new form");
+					return false;
+				}
+				
+				$('.new-form-target').removeClass('.new-form-target');
+				$(parent.getElementsByTagName("select")[0]).addClass('new-form-target');
+				current_content = $('.main-container').html();
+				$('.main-container').load('form_create.html', function () {
+					$('.field_setting').hide();
+				});
+				
+				return false;
+			}
+			
+			function cancel_form() {
+				$('.main-container').html(current_content);
+				return false;
+			}
+		</script>
+				<link rel="stylesheet" type="text/css" href="css/s-css/s-ui.css">
+                <link rel="stylesheet" type="text/css" href="css/na-global.css" />
+                <link rel="stylesheet" type="text/css" href="css/na-fg-main-style.css" />
+				<link rel="stylesheet" type="text/css" href="css/na-fg-form-builder.css">
+
+                </head>
+
+                <body id="stop">
+                    
+                    <div id="main-wrapper" class="container-fluid">
+                        <!-- Header Section -->
+                        <div class="row">
+                            <div class="main-header">  
+                                <div class="col-xs-3 col-sm-3 col-md-3">
+									<a class="logo" href="http://localhost/dynamicform/index.html">  <img src="http://localhost/dynamicform/images/logo.png"></a>
+                                </div>
+                                
+                                    <div class="col-xs-9 col-sm-9 col-md-9">
+                                    </div>
+                                    <div class="fg-clear"></div>
+                                    <ul class="main-tab">
+                                        <li><a id="home-page" href="http://localhost/dynamicform/organization.html">Organization</a></li>   
+                                        <li><a id="login" href="http://localhost/dynamicform/workflow.html" class="selected">WorkFlow</a></li>
+										<li><a id="login" href="http://localhost/dynamicform/statistic.html">statistic</a></li>                        
+                                    </ul>                          
+                                                                <div class="fg-clear"></div>
+                            </div>
+                        </div>
+
+
+<style>.ui-dialog{ top:300px !important; }</style> 
+<div class="row main-container fg-form-builder  grey-bg">	
+    <!--------Form column start------->
+    <div class="col-md-3 col-xs-3 nopadding">
+        <div class="form_column_one" id="element_container_div">
+            <p>COMMONLY USED SESSION</p>
+              <ul>
+    <li><a class="name"      id="person_confirm" onclick="addElement('person', 'PersonConfirm');"><i class="icon-user"></i><span>Person Confirm</span></a></li>
+    <li><a class="email"     id="person_email" onclick="addElement('notification', 'Email_Notification');"><i class="icon-mail"></i><span>Notification</span></a></li>
+    <li><a class="message"   id="form_creator" onclick="addElement('FormField', 'Form_Field');"><i class="icon-text"></i><span>Form</span></a></li>
+	<li><a class="name" 	 id="if_question" onclick="addElement('IfQuestion', 'If_Question');"><i class="icon-record"></i><span>IF</span></a></li>
+    <li><a class="date"      id="global_timer" onclick="addElement('Date', 'Timer_Notification');"><i class="icon-calendar"></i><span>Timer</span></a></li>
+    <!--<li><a class="upload" 	 id="upload" onclick="addElement('FileUpload', 'Name');"><i class="icon-upload2"></i><span>Upload</span></a></li>-->
+	
+            </ul>
+        </div> 
+    </div>
+    <!--------Form Column end #element_container_div------->
+    <div class="col-md-9 col-xs-9 nopadding">
+        <div class="form_column_grey">
+            <div class="fg-left">
+                <!-- left Section -->
+                <div class="form_grey_head" id="element_container_div_123">	
+                    <div id="form_setting" onclick="form_setting()"><h2 id='form_setting_para_1'>Work Flow Name</h2><p id='form_setting_para_2'>chose your wf name</p> <input type='hidden' id='submit_label' value='Submit'/></div><script>document.getElementById('form_setting').setAttribute('data-redirect','');</script>                </div>
+                <div class="form_column_two">
+                    <form method="post" action="#" id="form" enctype="multipart/form-data">
+					<ul id="element_container" class="d_content">
+						<!-- Put your flow -->
+					</ul>
+					<!-- cancel this submit on the button -->
+					<input id="save_form_button" type="submit" class="fg-btn medium blue inline" value="Next step" onclick="return create_form_array(create_workflow);">
+					<img id="loadingImage" style="display:none;margin-left:30px;" src="images/entry_gif.gif" />
+					</form>
+					</div>
+            </div>
+            <!-- right Section -->
+            <div class="fg-right">
+                <div id="form_column_three" class="form_column_three">
+                    <div id="field_setting_sub" class="field_setting">
+                        <ul id="combo_ul" >
+                        </ul>
+                    </div>
+                </div>
+            </div>
+             <div class="fg-clear"></div>
+        </div>
+    </div>
+
+    
+    <div id="delete_editform_first" style="height: auto !important; color:green;" title="Warning : Are you sure ?">
+    </div>
+    <div id="delete_editform_sec" style="height: auto !important; color:green;" title="Warning :you can't revert(undo,redo)this action">
+    </div>
+
+   <div class="white-overlay" id="form_builder_load">
+    <div>
+        <div class="fg-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+</div>
+</div>    
+<!-- Footer Section -->
+<div class="row">
+    <div class="main-footer">
+        <div class="link-footer">
+            <ul>
+            </ul>
+        </div>
+        <div class="copyright-footer">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+</div><!-- Main wrapper closing -->
+
+ <script type="text/javascript" src="js/na-plugin.js"></script> 
+ <script type="text/javascript" src="js/fg-script.js"></script>
+ <script type="text/javascript" src= "js/fg-extension.js"></script>
+ <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+ <script type="text/javascript" src="js/ElementCreationFile.js"></script>
+ <script type="text/javascript" src="js/jquery-ui.js"></script>
+ <script type="text/javascript" src="js/form_edit.js"></script>
+ <script type="text/javascript" src="js/form_create.js"></script>
+ <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+ <script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+ <script type="text/javascript" src="js/edit.form.1.js"></script>
+<script>
+
+   fg_loader_hide();
+    if (jQuery(".fg-dwl").length > 0) {
+        jQuery(".fg-dwl").attr("download", "");
+    }
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cfb4db53e0","applicationID":"5090808","transactionName":"ZAQENkpXDEIEWkdaWl1OJwFMXw1fSnxXWkFsBwkQVRkFVBFmUF9cVg8SPV5ZEFw=","queueTime":0,"applicationTime":15,"atts":"SEMHQAJNH0w=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-593.min.js"}</script></body>
+</html>
+<script>global_increment_variable =2;
+    radio_increment_varible = (2) + 1;
+    checkboxes_increment_varible = (2) + 1;
+    select_increment_varible = (2) + 1;
+    captcha_flage = (0);
+
+    edit_check_varible = global_increment_variable;
+    global_increment_variable++;
+    id =85820;
+    payment_flage = (0);
+</script>

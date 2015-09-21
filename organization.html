@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		
+		<script type="text/javascript" src="js/na-plugin.js"></script> 
+		<script type="text/javascript" src="js/fg-script.js"></script>
+		<script type="text/javascript" src= "js/fg-extension.js"></script>
+		
+		<script type="text/javascript" src="js/ElementCreationFile.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/form_edit.js"></script>
+		<script type="text/javascript" src="js/form_create.js"></script>
+		<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+		<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+		<script type="text/javascript" src="js/edit.form.1.js"></script>
+		
+		
+		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+		
+		<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],G9z0Bl:[function(n,e){function t(){var n=h.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(l,function(e,t){e in n||(n[e]=t)}),h.proto="https"===d.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=h.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",d=(""+location).split("?")[0],l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},h=e.exports={offset:i(),origin:d,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+  
+		<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+		<link rel="stylesheet" type="text/css" href="css/shCore.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<script src="js/d3.v3.min.js"></script>
+		<script type="text/javascript" async="" src="./tree_files/ga.js"></script>
+		<script type="text/javascript" src="./tree_files/d3.js"></script>
+		<script type="text/javascript" src="./tree_files/d3.layout.js"></script>
+		
+		
+		<style type="text/css">
+			.node circle {
+			  cursor: pointer;
+			  fill: #fff;
+			  stroke: steelblue;
+			  stroke-width: 1.5px;
+			}
+
+			.node text {
+			  font-size: 11px;
+			}
+
+			path.link {
+			  fill: none;
+			  stroke: #ccc;
+			  stroke-width: 1.5px;
+			}
+		</style>
+		
+		
+		<script>base_url = "";
+               // fg_loader_show();
+			   var body_form_json = null ; 
+			   
+			   
+			   
+			   			
+var m = [10, 60, 10, 60],
+    w = 680 - m[1] - m[3],
+    h = 680 - m[0] - m[2],
+    i = 0,
+    root;
+var jsonGrpah;
+
+var tree = d3.layout.tree()
+    .size([h, w]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var vis = d3.select("#workstation").append("svg:svg")
+    .attr("width", w + m[1] + m[3])
+    .attr("height", h + m[0] + m[2])
+  .append("svg:g")
+    .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
+function setGraph(json) {
+  root = json;
+  root.x0 = h / 2;
+  root.y0 = 0;
+
+  function toggleAll(d) {
+    if (d.children) {
+      d.children.forEach(toggleAll);
+      toggle(d);
+    }
+  }
+
+  // Initialize the display to show a few nodes.
+  root.children.forEach(toggleAll);
+  update(root);
+};
+
+function update(source) {
+  var duration = d3.event && d3.event.altKey ? 5000 : 500;
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse();
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d) { d.y = d.depth * 100; });
+
+  // Update the nodes…
+  var node = vis.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("svg:g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .on("click", function(d) { toggle(d); update(d); });
+
+  nodeEnter.append("svg:circle")
+      .attr("r", 1e-6)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  nodeEnter.append("svg:text")
+      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+      .text(function(d) { return d.name; })
+      .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeUpdate.select("circle")
+      .attr("r", 4.5)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  nodeUpdate.select("text")
+      .style("fill-opacity", 1);
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .remove();
+
+  nodeExit.select("circle")
+      .attr("r", 1e-6);
+
+  nodeExit.select("text")
+      .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = vis.selectAll("path.link")
+      .data(tree.links(nodes), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("svg:path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children.
+function toggle(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+}		   
+			   
+        </script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+			vis = d3.select("#workstation").append("svg:svg")
+					.attr("width", w + m[1] + m[3])
+					.attr("height", h + m[0] + m[2])
+				  .append("svg:g")
+					.attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+			
+				$.get("http://localhost:8080/api/v1/organizations/tree", function(data){					
+
+					setGraph(data); 
+					/*
+					
+					
+					jsonGrpah = new Object();
+					jsonGrpah.name = data;
+					jsonGrpah.children = new Array();
+					for(var i=0;i<1;i++)
+					{
+						jsonGrpah.children.push({"name" : "blabla"});
+						jsonGrpah.children.push({"name" : "blablabjhbjbk"});
+						//jsonGrpah.children[i].children = new  Array();
+						//jsonGrpah.children[i].children.push({"name": "Roy"});
+						//jsonGrpah.children[i].children.push({"name": "Baranes"});
+					}
+					console.log(jsonGrpah);
+					console.log(data);
+					setGraph(jsonGrpah);*/
+				});
+				
+				$('#showAllOrg').click(function() {
+					$('#workstation').empty();
+					loadData('org', this);
+				});
+				
+				$('#showAllSite').click(function() {
+					$('#workstation').empty();
+					loadData('site', this);
+				});
+				$('#showAllDept').click(function() {
+					$('#workstation').empty();
+					loadData('dept', this);
+				});
+				$('#showAllContacts').click(function() {
+					$('#workstation').empty();
+					loadData('contact', this);
+				});
+				// Creates
+				$('#createContact').click(function() {
+					$('#workstation').empty();
+					mark_selected(this);
+					createType('contact');
+				});
+				$('#createDept').click(function() {
+					$('#workstation').empty();
+					mark_selected(this);
+					createType('dept');
+				});
+				$('#createSite').click(function() {
+					$('#workstation').empty();
+					mark_selected(this);
+					createType('site');
+				});	
+				$('#createOrg').click(function() {
+					$('#workstation').empty();
+					mark_selected(this);
+					createType('org');
+				});
+			});
+			
+			function createFormDB(){
+				$.ajax({
+					url: 'http://localhost:8080/createForm',
+					data: body_form_json,
+					type: 'POST',
+				});
+			}
+			
+			function create_dept()
+			{
+				var params = { id: $('#dept_id').val(), dept_name: $('#dept_name').val(), manager_id: $('#manager_id').val(), site_id:$('#site_id').val(), create_user: $('#create_user').val()};
+				$.get("http://localhost:8080/createDept", params, function(data){
+					$('#workstation').empty();
+					$('#workstation').append(data);
+				});	
+			}
+			
+			function create_contact()
+			{
+				var params = { id: $('#contact_id').val(), first_name: $('#first_name').val(), last_name: $('#last_name').val(), phone: $('#phone').val(), other_phone: $('#other_phone').val(), email: $('#email').val() ,dept: $('#dept_id').val()};
+				$.get("http://localhost:8080/createUser", params, function(data){
+					$('#workstation').empty();
+					$('#workstation').append(data);
+				});	
+			}
+
+			function create_site()
+			{
+				var params = { id: $('#site_id').val(), site_name: $('#site_name').val(), manager_id: $('#manager_id').val(), organization_id: $('#organization_id').val(), create_user: $('#create_user').val()};
+				$.get("http://localhost:8080/createSite", params, function(data){
+					$('#workstation').empty();
+					$('#workstation').append(data);
+				});	
+			}
+
+			function create_org()
+			{
+				var params = { id: $("#org_id").val(), org_name: $('#org_name').val(), manager_id: $('#manager_id').val(), analyst_id: $('#analyst_id').val(), create_user: $('#create_user').val()};
+				var sending = "";
+				var updated = "";
+				if ($("#org_id").val() == -1) {
+					sending = '<div class="alert alert-info" role="alert">creating...</div>';
+					updated = '<div class="alert alert-info" role="alert">created successfully</div>';
+				}
+				$.get("http://localhost:8080/createOrg", params, function(data){
+					$('#workstation').prepand();
+					$('#workstation').append(data);
+				});	
+			}
+			
+			function createType(type, args){
+				args = args || { "type": "create", "id": -1, "name": "", "manager_id": -1, "analyst_id": -1, "org_id": -1, "site_id": -1,
+					     "first_name": "", "last_name": "", "phone": "", "email": "", "dept_id": -1 };
+				var data = '';
+				if(type == 'org'){
+					$.get("http://localhost:8080/api/v1/contacts", function(contacts) {
+						var available_mgr = '<select class="form-control" name="manager_id" id="manager_id">';
+						var available_analyst = '<select class="form-control" name="analyst_id" id="analyst_id">';
+						for (var id in contacts.contacts) {
+							available_mgr += '<option value="' + id + '" ' + (id == args.manager_id ? 'selected="selected"': '') + '>' + contacts.contacts[id].name + '</option>';
+							available_analyst += '<option value="' + id + '" ' + (id == args.analyst_id ? 'selected="selected"': '') + '>' + contacts.contacts[id].name + '</option>';
+						}
+						available_mgr += '</select>';
+						available_analyst += '</select>';
+						data +='<form method="get" id="form" enctype="multipart/form-data">\
+						<div class="form-group">\
+						<label for="orgName">Organization Name</label>';
+						data +='<input type="text" name="org_name" id="org_name" class="form-control" value="' + args.name + '"></div>\
+						<div class="form-group">\
+						<label for="manager_id">Manager ID</label>';
+						data +=available_mgr + '<label for="anlystID">Analyst ID</label>';
+						data +=available_analyst;
+						data += '<input type="hidden" name="form_action" id="form_action" value="' + args.type + '">'
+						data += '<input type="hidden" name="org_id" id="org_id" value="' + args.id + '">'
+						data +='<div><button type="submit" class="btn btn-default" id="save_form_button" onclick="create_org();">Submit</button></div></form>';					
+						$('#workstation').append(data);
+					});
+				}else if(type == 'site'){
+					$.get("http://localhost:8080/getOrgList", function(orgs){
+						$.get("http://localhost:8080/api/v1/contacts", function(contacts) {
+							var available_orgs = '<select class="form-control" name="organization_id" id="organization_id">';
+							for (var i=0; i<orgs['orgs'].length;i++) {
+								available_orgs += '<option value="' + orgs['orgs'][i].id + '" ' + (orgs['orgs'][i].id == args.org_id ? 'selected="selected"': '') + '>' + orgs['orgs'][i].name + '</option>';
+							}
+							available_orgs += '</select>';
+							
+							var available_mgr = '<select class="form-control" name="manager_id" id="manager_id">';
+							for (var id in contacts.contacts) {
+								available_mgr += '<option value="' + id + '" ' + (id == args.manager_id ? 'selected="selected"': '') + '>' + contacts.contacts[id].name + '</option>';
+							}
+							available_mgr += '</select>';
+							
+							data +='<form method="get" id="form" enctype="multipart/form-data">\
+							<div class="form-group">\
+							<label for="siteName">Site Name</label>';
+							data +='<input type="text" name="site_name" id="site_name" class="form-control" value="' + args.name + '"></div>\
+							<div class="form-group">\
+							<label for="mgrID">Manager ID</label>';
+							data += available_mgr + '</div>\
+							<div class="form-group">\
+							<label for="orgID">Organization ID</label>';
+							data += available_orgs + '</div>';
+							data += '<input type="hidden" name="form_action" id="form_action" value="' + args.type + '">'
+							data += '<input type="hidden" name="site_id" id="site_id" value="' + args.id + '">'
+						
+							data +='<div><button type="submit" class="btn btn-default" id="save_form_button" onclick="create_site();">Submit</button></div></form>';
+							
+							$('#workstation').append(data);
+						});
+					});
+				}else if(type == 'dept'){
+				$.get("http://localhost:8080/getSitesList", function(sites){
+					$.get("http://localhost:8080/api/v1/contacts", function(contacts) {
+						var available_sites = '<select class="form-control" name="site_id" id="site_id">';
+						for (var i=0; i<sites['sites'].length;i++) {
+							available_sites += '<option value="' + sites['sites'][i].id + '" ' + (sites['sites'][i].id == args.site_id ? 'selected="selected"': '') + '>' + sites['sites'][i].name + '</option>';
+						}
+						available_sites += '</select>';
+						
+						var available_mgr = '<select class="form-control" name="manager_id" id="manager_id">';
+						for (var id in contacts.contacts) {
+							available_mgr += '<option value="' + id + '" ' + (id == args.manager_id ? 'selected="selected"': '') + '>' + contacts.contacts[id].name + '</option>';
+						}
+						available_mgr += '</select>';
+							
+						data +='<form method="get" id="form" enctype="multipart/form-data">\
+						<div class="form-group">\
+						<label for="deptName">Department Name</label>';
+						data +='<input type="text" name="dept_name" id="dept_name" class="form-control" value="' + args.name + '"></div>\
+						<div class="form-group">\
+						<label for="mgrID">Manager ID</label>';
+						data += available_mgr + '</div>\
+						<div class="form-group">\
+						<label for="siteID">Site</label>';
+						data += available_sites + '</div>';
+						data += '<input type="hidden" name="form_action" id="form_action" value="' + args.type + '">'
+						data += '<input type="hidden" name="dept_id" id="dept_id" value="' + args.id + '">'
+						data +='<div><button type="submit" class="btn btn-default" id="save_form_button" onclick="create_dept();">Submit</button></div></form>';
+						$('#workstation').append(data);
+						});
+					});
+				}else if(type == 'contact'){
+				$.get("http://localhost:8080/getDeptsList", function(depts){
+						
+						var available_depts = '<select class="form-control" name="dept_id" id="dept_id">';
+						for (var i=0; i<depts['depts'].length;i++) {
+							available_depts += '<option value="' + depts['depts'][i].id + '" ' + (depts['depts'][i].id == args.dept_id ? 'selected="selected"': '') + '>' + depts['depts'][i].name + '</option>';
+						}
+						available_depts += '</select>';
+					data +='<form method="get" id="form" enctype="multipart/form-data">\
+					<div class="form-group">\
+					<label for="firstName">First Name</label>';
+					data +='<input type="text" name="first_name" id="first_name" class="form-control" value="' + args.first_name + '"></div>\
+					<label for="lastName">Last Name</label>';
+					data +='<input type="text" name="last_name" id="last_name" class="form-control" value="' + args.last_name + '"></div>\
+					<div class="form-group">\
+					<label for="phone">Phone Number</label>';
+					data +='<input type="text" name="phone" id="phone" class="form-control" value="' + args.phone + '"></div>\
+					<div class="form-group">\
+					<label for="email">Email</label>';
+					data +='<input type="text" name="email" id="email" class="form-control" value="' + args.email + '"></div>\
+					<div class="form-group">\
+					<label for="deptID">Department</label>';
+					data += available_depts + '</div>';
+					data += '<input type="hidden" name="form_action" id="form_action" value="' + args.type + '">'
+					data += '<input type="hidden" name="contact_id" id="contact_id" value="' + args.id + '">'
+					data +='<div><button type="submit" class="btn btn-default" id="save_form_button" onclick="create_contact();">Submit</button></div></form>';
+					$('#workstation').append(data);
+					});
+				}
+				$('#workstation').append(data);
+			}
+			
+			function mark_selected(self_ref) {
+				$('.form_column_one ul li a.selected').removeClass('selected');
+				$(self_ref).addClass('selected');
+			}
+			
+			function loadData(type, self_ref){
+				mark_selected(self_ref);
+				if(type == 'org'){
+					$.get("http://localhost:8080/showAllOrg", function(data){
+						$('#workstation').append(data);
+						$('#example').DataTable();
+					});
+				}else if(type == 'site'){
+					$.get("http://localhost:8080/showAllSite", function(data){
+						$('#workstation').append(data);
+						$('#example').DataTable();
+					});
+				}else if(type == 'dept'){
+					$.get("http://localhost:8080/showAllDepts", function(data){
+						$('#workstation').append(data);
+						$('#example').DataTable();
+					});
+				}else if(type == 'contact'){
+					$.get("http://localhost:8080/showAllContacts", function(data){
+						$('#workstation').append(data);
+						$('#example').DataTable();
+					});
+				}
+			}
+			
+			function editOrg(org_id, org_name, manager_id, analyst_id) {
+				options = {"action": "edit", 
+						 "id": org_id, 
+						 "name": org_name,
+						 "manager_id": manager_id,
+						 "analyst_id": analyst_id};
+				$('#workstation').empty();
+				createType('org', 
+						options);
+			}
+			
+			function editSite(site_id, site_name, manager_id, org_id) {
+				options = {"action": "edit", 
+						 "id": site_id, 
+						 "name": site_name,
+						 "manager_id": manager_id,
+						 "org_id": org_id};
+				$('#workstation').empty();
+				createType('site', 
+						options);
+			}
+
+			function editDept(dept_id, dept_name, manager_id, site_id) {
+				options = {"action": "edit", 
+						 "id": dept_id, 
+						 "name": dept_name,
+						 "manager_id": manager_id,
+						 "site_id": site_id};
+				$('#workstation').empty();
+				createType('dept', 
+						options);
+			}
+
+			function editContact(contact_id, first_name, last_name, phone, email, dept_id) {
+				options = {"action": "edit", 
+						 "id": contact_id, 
+						 "first_name": first_name,
+						 "last_name": last_name,
+						 "phone": phone,
+						 "email": email,
+						 "dept_id": dept_id};
+				$('#workstation').empty();
+				createType('contact', 
+						options);
+			}
+		</script>
+				<link rel="stylesheet" type="text/css" href="css/s-css/s-ui.css">
+                <link rel="stylesheet" type="text/css" href="css/na-global.css" />
+                <link rel="stylesheet" type="text/css" href="css/na-fg-main-style.css" />
+				<link rel="stylesheet" type="text/css" href="css/na-fg-form-builder.css">
+
+                </head>
+
+                <body id="stop">
+                    
+                    <div id="main-wrapper" class="container-fluid">
+                        <!-- Header Section -->
+                        <div class="row">
+                     <div class="main-header">  
+                                <div class="col-xs-3 col-sm-3 col-md-3">							
+                                    <a class="logo" href="http://localhost/dynamicform/index.html">  <img src="http://localhost/dynamicform/images/logo.png"></a>
+                                </div>
+                                
+                                    <div class="col-xs-9 col-sm-9 col-md-9">
+                                    </div>
+                                    <div class="fg-clear"></div>
+                                    <ul class="main-tab">
+                                        <li><a id="home-page" href="http://localhost/dynamicform/organization.html" class="selected">Organization</a></li>   
+                                        <li><a id="login" href="http://localhost/dynamicform/workflow.html">WorkFlow</a></li>
+										<li><a id="login" href="http://localhost/dynamicform/statistic.html">statistic</a></li>
+                                    </ul>                          
+                                                                <div class="fg-clear"></div>
+                            </div>
+                        </div>
+
+
+<style>.ui-dialog{ top:300px !important; }</style> 
+<div class="row main-container fg-form-builder  grey-bg">	
+    <!--------Form column start------->
+    <div class="col-md-3 col-xs-3 nopadding">
+        <div class="form_column_one" id="element_container_div">
+            <p>search</p>
+              <ul>  
+	<li><a class="name" id="showAllOrg"><i class="icon-list2"></i><span>Organization</span></a></li>
+	<li><a class="name" id="showAllSite"><i class="icon-list2"></i><span>Sites</span></a></li>
+	<li><a class="name" id="showAllDept"><i class="icon-list2"></i><span>Depts</span></a></li>
+	<li><a class="name" id="showAllContacts"><i class="icon-list2"></i><span>Contacts</span></a></li>
+
+            </ul>
+            <p>Create New</p>	
+            <ul>
+		<li><a class="name" id="createContact"><i class="icon-user"></i><span>Contact</span></a></li>	
+		<li><a class="message" id="createDept"><i class="icon-text"></i><span>Dept</span></a></li>
+		<li><a class="message" id="createSite"><i class="icon-text"></i><span>Sites</span></a></li>
+		<li><a class="message" id="createOrg" ><i class="icon-text"></i><span>Organization</span></a></li>
+            </ul>
+        </div> 
+    </div>
+    <!--------Form Column end #element_container_div------->
+    <div class="col-md-9 col-xs-9 nopadding">
+        <div id="workstation" class="form_column_grey">
+            
+        </div>
+    </div>
+
+    
+    <div id="delete_editform_first" style="height: auto !important; color:green;" title="Warning : Are you sure ?">
+    </div>
+    <div id="delete_editform_sec" style="height: auto !important; color:green;" title="Warning :you can't revert(undo,redo)this action">
+    </div>
+
+   <div class="white-overlay" id="form_builder_load">
+    <div>
+        <div class="fg-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+</div>
+</div>    
+<!-- Footer Section -->
+<div class="row">
+    <div class="main-footer">
+        <div class="link-footer">
+            <ul>
+            </ul>
+        </div>
+        <div class="copyright-footer">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+</div><!-- Main wrapper closing -->
+<script>
+/*
+autantication id
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+		function(m,key,value) {
+		  vars[key] = value;
+		});
+		return vars;
+	}
+
+	var sessionId = getUrlVars()["sessionId"];
+	alert(sessionId);
+*/
+</script>
+<script>
+
+   fg_loader_hide();
+    if (jQuery(".fg-dwl").length > 0) {
+        jQuery(".fg-dwl").attr("download", "");
+    }
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cfb4db53e0","applicationID":"5090808","transactionName":"ZAQENkpXDEIEWkdaWl1OJwFMXw1fSnxXWkFsBwkQVRkFVBFmUF9cVg8SPV5ZEFw=","queueTime":0,"applicationTime":15,"atts":"SEMHQAJNH0w=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-593.min.js"}</script></body>
+</html>

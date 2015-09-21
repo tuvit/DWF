@@ -1,0 +1,101 @@
+<!--------Form column start------->
+<div class="col-md-3 col-xs-3 nopadding">
+	<div class="form_column_one" id="element_container_div">
+		<p>COMMONLY USED FIELDS</p>
+		  <ul>
+<li><a class="name"      onclick="addElement('TextField', 'Name');"><i class="icon-user"></i><span>Name</span></a></li>
+<li><a class="email"     onclick="addElement('TextField', 'Email');"><i class="icon-mail"></i><span>Email</span></a></li>
+<li><a class="contact"   onclick="addElement('TextField', 'Number');"><i class="icon-mobile"></i><span>Number</span></a></li>
+<li><a class="message"   onclick="addElement('TextArea', 'Message');"><i class="icon-text"></i><span>Message</span></a></li>
+<li><a class="date"      onclick="addElement('Date', 'Date');"><i class="icon-calendar"></i><span>Date</span></a></li>
+		</ul>
+		<p>All Form Fields</p>	
+		<ul>
+	<li><a class="input" onclick="addElement('TextField', 'Input');"><i class="icon-pencil"></i><span>Single Line Text</span></a></li>
+	<li><a class="textarea" onclick="addElement('TextArea', 'TextArea');"><i class="icon-list2"></i><span>Multi Line Text</span></a></li>
+	<li><a class="checkbox" onclick="addElement('Check_Boxes', 'Checkboxes');"><i class="icon-checkmark"></i><span>CheckBox</span></a></li>
+	<li><a class="select" onclick="addElement('Select', 'Select');"><i class="icon-list"></i><span>Select</span></a></li>
+	<li><a class="radio" onclick="addElement('Radio_Button', 'Radio Button');"><i class="icon-record"></i><span>Radio</span></a></li>
+		</ul>
+	</div> 
+</div>
+<!--------Form Column end #element_container_div------->
+<div class="col-md-9 col-xs-9 nopadding">
+	<div class="form_column_grey">
+		<div class="fg-left">
+			<!-- left Section -->
+			<div class="form_grey_head" id="element_container_div_123">	
+				<div id="form_setting" onclick="form_setting()"><h2 id='form_setting_para_1'>Contact Us</h2><p id='form_setting_para_2'>Fill in the form below and we will get back to you as soon as possible !</p> <input type='hidden' id='submit_label' value='Submit'/></div><script>document.getElementById('form_setting').setAttribute('data-redirect','');</script>                </div>
+			<div class="form_column_two">
+				<form method="post" action="#" id="form" enctype="multipart/form-data">
+				<ul id="element_container" class="d_content">
+					<li data-targetlogic='1' data-Sourcelogic='1' data-visible='block' class='inkdesk_form element_container_li' id='0' onmouseout='mouse_out_remove();' onmouseover='close_botton(this.id)' >
+						<div id='div_0' title='Name' class='remove_error_container edit' onclick='setDivClass(this); Dynamic_field_setting(this.parentNode.id); mad_effect();'>
+							<div style="display:none;" id="info0" class="form_desc" original-title=""></div>
+							<span id='break_line0' class='element_drag'></span>
+							<div style='display:block;' id='info0' onmouseout='displayPara(0,false)' onmouseover='displayPara(0,true)' ></div>
+							<span class='fg-outline'>
+								<input class='element' placeholder='Name' type='text' name='text_element0' id='text_element0' maxlength='' readonly='true'/>
+							</span>
+							<p style='display:none' class='ink_desc' id='list_item_instruction_para0'></p>
+						</div>
+					</li>
+					<li data-targetlogic='1' data-Sourcelogic='1' data-visible='block' class='inkdesk_form element_container_li' id='1' onmouseout='mouse_out_remove();' onmouseover='close_botton(this.id)' >
+						<div id='div_1' title='Email' class='remove_error_container edit' onclick='setDivClass(this); Dynamic_field_setting(this.parentNode.id); mad_effect();'>
+							<div style="display:none;" id="info1" class="form_desc" original-title=""></div>
+							<span id='break_line1' class='element_drag'></span>
+							<div style='display:block;' id='info1' onmouseout='displayPara(1,false)' onmouseover='displayPara(1,true)' ></div>
+							<span class='fg-outline'>
+								<input class='element' placeholder='Email' type='text' name='text_element1' id='text_element1' maxlength='' readonly='true'/>
+							</span>
+							<p style='display:none' class='ink_desc' id='list_item_instruction_para1'></p>
+						</div>
+					</li>
+					<li data-targetlogic='1' data-Sourcelogic='1' data-visible='block' class='inkdesk_form element_container_li' id='2' onmouseout='mouse_out_remove();' onmouseover='close_botton(this.id)' >
+						<div id='div_2' title='Message' class='remove_error_container edit' onclick='setDivClass(this); Dynamic_field_setting(this.parentNode.id); mad_effect();' >
+							<div style="display:none;" id="info2" class="form_desc" original-title=""></div>
+							<span id='break_line2' class='element_drag'></span>
+							<div style='display:block;' id='info2' onmouseout='displayPara(2,false)' onmouseover='displayPara(2,true)' ></div>
+							<span class='form_area fg-outline'>
+								<textarea placeholder='Message' name='textarea' id='text_element2'  rows='10' cols='50' spellcheck='true' tabindex='12' class='form_textarea element' maxlength='' readonly='true'></textarea>
+							</span>
+							<p style='display:none' class='ink_desc' id='list_item_instruction_para2'></p>
+						</div>
+					</li>
+				</ul>
+				<a href="#" id="save_form_button" type="submit" class="fg-btn medium blue inline" onclick="return create_form_array(create_form);">Next step</a>
+				<a href="#" onclick="return cancel_form();" class="fg-btn medium blue inline">cancel</a>
+				<img id="loadingImage" style="display:none;margin-left:30px;" src="images/entry_gif.gif" />
+				</form>
+				</div>
+		</div>
+		<!-- right Section -->
+		<div class="fg-right">
+			<div id="form_column_three" class="form_column_three">
+				<div id="field_setting_sub" class="field_setting">
+					<ul id="combo_ul" >
+					</ul>
+				</div>
+			</div>
+		</div>
+		 <div class="fg-clear"></div>
+	</div>
+</div>
+
+
+<div id="delete_editform_first" style="height: auto !important; color:green;" title="Warning : Are you sure ?">
+</div>
+<div id="delete_editform_sec" style="height: auto !important; color:green;" title="Warning :you can't revert(undo,redo)this action">
+</div>
+<!-- TODO: add when saving the form 
+<div class="white-overlay" id="form_builder_load">
+<div>
+	<div class="fg-spinner">
+		<div class="bounce1"></div>
+		<div class="bounce2"></div>
+		<div class="bounce3"></div>
+		<p>Please wait...</p>
+	</div>
+</div>
+</div>
+-->

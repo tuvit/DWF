@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+		
+		<script type="text/javascript" src="js/na-plugin.js"></script> 
+		<script type="text/javascript" src="js/fg-script.js"></script>
+		<script type="text/javascript" src= "js/fg-extension.js"></script>
+		
+		<script type="text/javascript" src="js/ElementCreationFile.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/form_edit.js"></script>
+		<script type="text/javascript" src="js/form_create.js"></script>
+		<script type="text/javascript" src="js/jquery.tipsy.js"></script>
+		<script type="text/javascript" src="js/jquery.json-1.3.js"></script>
+		<script type="text/javascript" src="js/edit.form.1.js"></script>
+		
+		<script src="js/d3.v3.min.js"></script>
+		
+		<script type="text/javascript" language="javascript" src="js/jquery.dataTables.js"></script>
+		<script type="text/javascript" language="javascript" src="js/shCore.js"></script>
+		
+		<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var o=e[t]={exports:{}};n[t][0].call(o.exports,function(e){var o=n[t][1][e];return r(o?o:e)},o,o.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({QJf3ax:[function(n,e){function t(n){function e(e,t,a){n&&n(e,t,a),a||(a={});for(var u=c(e),f=u.length,s=i(a,o,r),p=0;f>p;p++)u[p].apply(s,t);return s}function a(n,e){f[n]=c(n).concat(e)}function c(n){return f[n]||[]}function u(){return t(e)}var f={};return{on:a,emit:e,create:u,listeners:c,_events:f}}function r(){return{}}var o="nr@context",i=n("gos");e.exports=t()},{gos:"7eSDFh"}],ee:[function(n,e){e.exports=n("QJf3ax")},{}],3:[function(n,e){function t(n){return function(){r(n,[(new Date).getTime()].concat(i(arguments)))}}var r=n("handle"),o=n(1),i=n(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(n,e){window.NREUM[e]=t("api-"+e)}),e.exports=window.NREUM},{1:12,2:13,handle:"D5DuLP"}],gos:[function(n,e){e.exports=n("7eSDFh")},{}],"7eSDFh":[function(n,e){function t(n,e,t){if(r.call(n,e))return n[e];var o=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return n[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],D5DuLP:[function(n,e){function t(n,e,t){return r.listeners(n).length?r.emit(n,e,t):(o[n]||(o[n]=[]),void o[n].push(e))}var r=n("ee").create(),o={};e.exports=t,t.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(n,e){e.exports=n("D5DuLP")},{}],XL7HBI:[function(n,e){function t(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:i(n,o,function(){return r++})}var r=1,o="nr@id",i=n("gos");e.exports=t},{gos:"7eSDFh"}],id:[function(n,e){e.exports=n("XL7HBI")},{}],loader:[function(n,e){e.exports=n("G9z0Bl")},{}],G9z0Bl:[function(n,e){function t(){var n=h.info=NREUM.info;if(n&&n.licenseKey&&n.applicationID&&f&&f.body){c(l,function(e,t){e in n||(n[e]=t)}),h.proto="https"===d.split(":")[0]||n.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=f.createElement("script");e.src=h.proto+n.agent,f.body.appendChild(e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=n("handle"),c=n(1),u=(n(2),window),f=u.document,s="addEventListener",p="attachEvent",d=(""+location).split("?")[0],l={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-593.min.js"},h=e.exports={offset:i(),origin:d,features:{}};f[s]?(f[s]("DOMContentLoaded",o,!1),u[s]("load",t,!1)):(f[p]("onreadystatechange",r),u[p]("onload",t)),a("mark",["firstbyte",i()])},{1:12,2:3,handle:"D5DuLP"}],12:[function(n,e){function t(n,e){var t=[],o="",i=0;for(o in n)r.call(n,o)&&(t[i]=e(o,n[o]),i+=1);return t}var r=Object.prototype.hasOwnProperty;e.exports=t},{}],13:[function(n,e){function t(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,o=t-e||0,i=Array(0>o?0:o);++r<o;)i[r]=n[e+r];return i}e.exports=t},{}]},{},["G9z0Bl"]);</script>
+  
+		<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.css">
+		<link rel="stylesheet" type="text/css" href="css/shCore.css">
+		<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+		<script>base_url = "";
+               // fg_loader_show();
+			   var body_form_json = null ; 
+        </script>
+		<style>
+svg text{
+	font-size:12px;
+}
+rect{
+	shape-rendering:crispEdges;
+}
+path {  stroke: #fff; }
+path:hover {  opacity:0.9; }
+rect:hover {  fill:blue; }
+.axis {  font: 10px sans-serif; }
+.legend tr{    border-bottom:1px solid grey; }
+.legend tr:first-child{    border-top:1px solid grey; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {  display: none; }
+.legend{
+    margin-bottom:76px;
+    display:inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+.legend td{
+    padding:4px 5px;
+    vertical-align:bottom;
+}
+.legendFreq, .legendPerc{
+    align:right;
+    width:50px;
+}
+
+.legend_selected {
+	font-weight: bold;
+}
+
+#workstation {
+	text-align: center;
+}
+
+	</style>
+		
+		<script type="text/javascript">
+		function dashboard(id, fData){
+			var barColor = 'steelblue';
+			function segColor(c){ return {runing:"#807dba", done:"#e08214",failed:"#41ab5d"}[c]; }
+			
+			// function to handle pieChart.
+			function pieChart(pD){
+				var pC ={},    pieDim ={w: 300, h: 350};
+				pieDim.r = Math.min(pieDim.w, pieDim.h) / 2;
+						
+				// create svg for pie chart.
+				var piesvg = d3.select(id).append("svg")
+					.attr("width", pieDim.w).attr("height", pieDim.h).append("g")
+					.attr("transform", "translate("+pieDim.w/2+","+pieDim.h/2+")");
+				
+				// create function to draw the arcs of the pie slices.
+				var arc = d3.svg.arc().outerRadius(pieDim.r - 10).innerRadius(0);
+
+				// create a function to compute the pie slice angles.
+				var pie = d3.layout.pie().sort(null).value(function(d) { return d.count; });
+
+				// Draw the pie slices.
+				piesvg.selectAll("path").data(pie(pD)).enter().append("path").attr("d", arc)
+					.each(function(d) { this._current = d; })
+					.style("fill", function(d) { return segColor(d.data.status); })
+					.on("mouseover",mouseover).on("mouseout",mouseout);
+
+				// create function to update pie-chart. This will be used by histogram.
+				pC.update = function(nD){
+					piesvg.selectAll("path").data(pie(nD)).transition().duration(500)
+						.attrTween("d", arcTween);
+				}        
+				// Utility function to be called on mouseover a pie slice.
+				function mouseover(d){
+					// call the update function of histogram with new data.
+					$(".legend_" + d.data.status).addClass('legend_selected');
+				}
+				//Utility function to be called on mouseout a pie slice.
+				function mouseout(d){
+					// call the update function of histogram with all data.
+					$(".legend_" + d.data.status).removeClass('legend_selected');
+					
+				}
+				// Animating the pie-slice requiring a custom function which specifies
+				// how the intermediate paths should be drawn.
+				function arcTween(a) {
+					var i = d3.interpolate(this._current, a);
+					this._current = i(0);
+					return function(t) { return arc(i(t));    };
+				}    
+				return pC;
+			}
+			
+			// function to handle legend.
+			function legend(lD){
+				var leg = {};
+					
+				// create table for legend.
+				var legend = d3.select(id).append("table").attr('class','legend');
+				
+				// create one row per segment.
+				var tr = legend.append("tbody").selectAll("tr").data(lD).enter().append("tr").attr('class', function(d){ return 'legend_'+d.status; });
+					
+				// create the first column for each segment.
+				tr.append("td").append("svg").attr("width", '16').attr("height", '16').append("rect")
+					.attr("width", '16').attr("height", '16')
+					.attr("fill",function(d){ return segColor(d.status); });
+					
+				// create the second column for each segment.
+				tr.append("td").text(function(d){ return d.status;});
+
+				// create the third column for each segment.
+				tr.append("td").attr("class",'legendFreq')
+					.text(function(d){ return d3.format(",")(d.count);});
+
+				// create the fourth column for each segment.
+				tr.append("td").attr("class",'legendPerc')
+					.text(function(d){ return getLegend(d,lD);});
+
+				// Utility function to be used to update the legend.
+				leg.update = function(nD){
+					// update the data attached to the row elements.
+					var l = legend.select("tbody").selectAll("tr").data(nD);
+
+					// update the frequencies.
+					l.select(".legendFreq").text(function(d){ return d3.format(",")(d.count);});
+
+					// update the percentage column.
+					l.select(".legendPerc").text(function(d){ return getLegend(d,nD);});        
+				}
+				
+				function getLegend(d,aD){ // Utility function to compute percentage.
+					return d3.format("%")(d.count/d3.sum(aD.map(function(v){ return v.count; })));
+				}
+
+				return leg;
+			}
+			
+			var pC = pieChart(fData); // create the pie-chart.
+			var leg= legend(fData);  // create the legend.
+		}
+		
+			function mark_selected(self_ref) {
+				$('.form_column_one ul li a.selected').removeClass('selected');
+				$(self_ref).addClass('selected');
+			}
+			
+			$(document).ready(function() {
+				$('#Global').click(showGlobal);
+				showGlobal();
+			});
+			
+			function showGlobal(){
+				$('#workstation').empty();
+				mark_selected(this);
+				$.get("http://localhost:8080/ShowGlobal	", function(data){
+					dashboard('#workstation',data.stats);
+				});
+			}
+			
+		</script>
+				<link rel="stylesheet" type="text/css" href="css/s-css/s-ui.css">
+                <link rel="stylesheet" type="text/css" href="css/na-global.css" />
+                <link rel="stylesheet" type="text/css" href="css/na-fg-main-style.css" />
+				<link rel="stylesheet" type="text/css" href="css/na-fg-form-builder.css">
+
+                </head>
+
+                <body id="stop">
+                    
+                    <div id="main-wrapper" class="container-fluid">
+                        <!-- Header Section -->
+                        <div class="row">
+                     <div class="main-header">  
+                                <div class="col-xs-3 col-sm-3 col-md-3">							
+                                    <a class="logo" href="http://localhost/dynamicform/index.html">  <img src="http://localhost/dynamicform/images/logo.png"></a>
+                                </div>
+                                
+                                    <div class="col-xs-9 col-sm-9 col-md-9">
+                                    </div>
+                                    <div class="fg-clear"></div>
+                                    <ul class="main-tab">
+                                        <li><a id="home-page" href="http://localhost/dynamicform/organization.html">Organization</a></li>   
+                                        <li><a id="login" href="http://localhost/dynamicform/workflow.html">WorkFlow</a></li>
+										<li><a id="login" href="http://localhost/dynamicform/statistic.html" class="selected">statistic</a></li>
+                                    </ul>                          
+                                                                <div class="fg-clear"></div>
+                            </div>
+                        </div>
+
+
+<style>.ui-dialog{ top:300px !important; }</style> 
+<div class="row main-container fg-form-builder  grey-bg">	
+    <!--------Form column start------->
+    <div class="col-md-3 col-xs-3 nopadding">
+        <div class="form_column_one" id="element_container_div">
+            <p>Standarts Reports</p>
+              <ul>  
+	<li><a class="name selected" id="Global"><i class="icon-text"></i><span>Global</span></a></li>
+	<li><a class="name" id="showAllSite"><i class="icon-text"></i><span>Sites</span></a></li>
+	<li><a class="name" id="showAllDept"><i class="icon-text"></i><span>Depts</span></a></li>
+	<li><a class="name" id="showAllContacts"><i class="icon-text"></i><span>Contacts</span></a></li>
+
+            </ul>
+ 
+        </div> 
+    </div>
+    <!--------Form Column end #element_container_div------->
+    <div class="col-md-9 col-xs-9 nopadding">
+        <div id="workstation" class="form_column_grey">
+            
+        </div>
+    </div>
+
+    
+    <div id="delete_editform_first" style="height: auto !important; color:green;" title="Warning : Are you sure ?">
+    </div>
+    <div id="delete_editform_sec" style="height: auto !important; color:green;" title="Warning :you can't revert(undo,redo)this action">
+    </div>
+
+   <div class="white-overlay" id="form_builder_load">
+    <div>
+        <div class="fg-spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+</div>
+</div>    
+<!-- Footer Section -->
+<div class="row">
+    <div class="main-footer">
+        <div class="link-footer">
+            <ul>
+            </ul>
+        </div>
+        <div class="copyright-footer">
+            <p></p>
+        </div>
+    </div>
+</div>
+
+</div><!-- Main wrapper closing -->
+
+
+<script>
+
+   fg_loader_hide();
+    if (jQuery(".fg-dwl").length > 0) {
+        jQuery(".fg-dwl").attr("download", "");
+    }
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cfb4db53e0","applicationID":"5090808","transactionName":"ZAQENkpXDEIEWkdaWl1OJwFMXw1fSnxXWkFsBwkQVRkFVBFmUF9cVg8SPV5ZEFw=","queueTime":0,"applicationTime":15,"atts":"SEMHQAJNH0w=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-593.min.js"}</script></body>
+</html>
